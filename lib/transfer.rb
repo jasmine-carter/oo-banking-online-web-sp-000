@@ -18,13 +18,13 @@ attr_accessor :status
   end
 
   def execute_transaction
-    if @status != "complete"
-      if @sender.valid? == false
-        "Transaction rejected. Please check your account balance"
-      else
+    while @status != "complete"
+      if @sender.valid?
         @sender.withdrawel(amount)
         @receiver.deposit(amount)
         @status = "complete"
+      else
+        "Transaction rejected. Please check your account balance"
       end
     end
   end
