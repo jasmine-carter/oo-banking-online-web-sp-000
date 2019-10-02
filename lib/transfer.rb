@@ -21,9 +21,6 @@ attr_accessor :status
     if @status != "complete"
       if @sender.valid? == false
         "Transaction rejected. Please check your account balance"
-        @sender.withdrawel(amount)
-        @receiver.deposit(amount)
-        @status = "complete"
       else
         @sender.withdrawel(amount)
         @receiver.deposit(amount)
