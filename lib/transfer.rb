@@ -33,7 +33,8 @@ attr_accessor :status
     if @status = "complete"
       @sender.deposit(amount)
       @receiver.withdrawel(amount)
+      @status = "reversed"
     end
   end
-  
+
 end
