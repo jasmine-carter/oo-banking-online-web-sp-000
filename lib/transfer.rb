@@ -35,4 +35,5 @@ attr_accessor :status
       @receiver.withdrawel(amount)
     end
   end
+  
 end
