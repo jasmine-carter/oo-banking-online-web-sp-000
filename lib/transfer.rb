@@ -29,4 +29,7 @@ attr_accessor :status
     end
   end
 
+  def reverse_transfer
+
+  end
 end
