@@ -30,7 +30,7 @@ attr_accessor :status
   end
 
   def reverse_transfer
-    if @status = "complete"
+    if @status == "complete"
       @sender.deposit(amount)
       @receiver.withdrawel(amount)
       @status = "reversed"
