@@ -27,6 +27,7 @@ attr_accessor :status
         @status = "complete"
       end
       "Transaction rejected. Please check your account balance."
+      @status = "rejected"
     end
   end
 
