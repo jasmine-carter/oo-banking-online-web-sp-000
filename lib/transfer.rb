@@ -19,7 +19,7 @@ attr_accessor :status
   end
 
   def execute_transaction
-    #binding.pry
+    binding.pry
     if @status != "complete"
       if @sender.valid?
         @sender.withdrawel(amount)
