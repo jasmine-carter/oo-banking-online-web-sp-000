@@ -18,7 +18,7 @@ attr_accessor :status
   end
 
   def execute_transaction
-    if @status != "complete"
+    if @status == "pending"
       if @sender.valid?
         @sender.withdrawel(amount)
         @receiver.deposit(amount)
