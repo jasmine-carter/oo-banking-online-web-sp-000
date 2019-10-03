@@ -26,7 +26,7 @@ attr_accessor :status
         @receiver.deposit(amount)
         @status = "complete"
       else
-        return "Transaction rejected. Please check your account balance."
+        "Transaction rejected. Please check your account balance."
         @status = "rejected"
       end
     end
