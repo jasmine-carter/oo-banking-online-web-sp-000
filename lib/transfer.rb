@@ -21,7 +21,7 @@ attr_accessor :status
   def execute_transaction
     #binding.pry
     if @status != "complete"
-      if valid?
+      if valid? && amount < = sender.balance
         @sender.withdrawel(amount)
         @receiver.deposit(amount)
         @status = "complete"
