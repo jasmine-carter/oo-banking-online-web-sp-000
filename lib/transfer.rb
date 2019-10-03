@@ -21,13 +21,13 @@ attr_accessor :status
   def execute_transaction
     #binding.pry
     if @status != "complete"
-      if self.valid? == false
-        @status = "rejected"
-        return "Transaction rejected. Please check your account balance."
-      else
+      if self.valid?
         @sender.withdrawel(amount)
         @receiver.deposit(amount)
         @status = "complete"
+      else
+        @status = "rejected"
+        return "Transaction rejected. Please check your account balance."
       end
     end
   end
